@@ -1,7 +1,7 @@
 # Assignment 4: Forms and Validation
 
 Student: Kamila Ahmadzada
-Group: (SE-2530)
+Group: SE-2530
 
 Website for the Web Technologies assignment on forms. Each task has its own page and the navbar links them all.
 
@@ -16,8 +16,8 @@ Website for the Web Technologies assignment on forms. Each task has its own page
 
 ## How to run
 
-Open index.html in a browser. Bootstrap loads from a CDN, so you need an internet connection.
+Open index.html in a browser. Bootstrap 5.3 loads from a CDN, so you need an internet connection.
 
 ## Live site
 
-https://kamilaahmadzada.github.io/web-assignment4-forms/# web-assignment4-forms
+https://kamilaahmadzada.github.io/web-assignment4-forms/

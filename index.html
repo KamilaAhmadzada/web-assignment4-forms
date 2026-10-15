@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forms and Validation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -28,10 +29,52 @@
     </nav>
 
     <main class="container py-4">
-        <h1>Assignment 4: Forms and Validation</h1>
-        <p>Student: Kamila Ahmadzada. Group: write your group here.</p>
-        <p>Use the navbar to open each task.</p>
+        <div class="hero">
+            <h1>Assignment 4: Forms and Validation</h1>
+            <p class="lead mb-1">Student: Kamila Ahmadzada. Group: write your group here.</p>
+            <p class="mb-0">Plain HTML forms, HTML5 validation, Bootstrap forms and a registration form. Pick a task below.</p>
+        </div>
+
+        <div class="row g-3 mt-2">
+            <div class="col-md-6 col-lg-4">
+                <a class="task-card" href="task0-contact.html">
+                    <span class="task-num">Task 0</span>
+                    <h2 class="h5">Simple contact form</h2>
+                    <p>Plain HTML form with labels.</p>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="task-card" href="task1-validation.html">
+                    <span class="task-num">Task 1</span>
+                    <h2 class="h5">HTML5 validation</h2>
+                    <p>required, type, minlength and maxlength.</p>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="task-card" href="task2-bootstrap.html">
+                    <span class="task-num">Task 2</span>
+                    <h2 class="h5">Bootstrap form styling</h2>
+                    <p>Form classes and the grid system.</p>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="task-card" href="task3-bootstrap-validation.html">
+                    <span class="task-num">Task 3</span>
+                    <h2 class="h5">Bootstrap validation</h2>
+                    <p>is-valid, is-invalid and feedback messages.</p>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <a class="task-card" href="task4-registration.html">
+                    <span class="task-num">Task 4</span>
+                    <h2 class="h5">Registration form</h2>
+                    <p>Full form with validation and a responsive layout.</p>
+                </a>
+            </div>
+        </div>
     </main>
+
+    <footer class="site-footer">Assignment 4 &middot; Kamila Ahmadzada</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

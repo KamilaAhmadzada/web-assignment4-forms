@@ -1,39 +1,189 @@
-.live-validate .form-control:user-valid {
-    border-color: #198754;
-}
-.live-validate .form-control:user-valid ~ .valid-feedback {
-    display: block;
-}
-.live-validate .form-control:user-invalid {
-    border-color: #dc3545;
-}
-.live-validate .form-control:user-invalid ~ .invalid-feedback {
-    display: block;
-}
-body {
-    background-color: #f6f7f9;
+:root {
+    --brand: #3b4a7a;
+    --brand-dark: #2b3860;
+    --ink: #1f2a44;
+    --soft: #eef1fb;
 }
 
-.plain-form label {
+/* ---------- page and navbar ---------- */
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(180deg, var(--soft) 0, #f6f7f9 340px) no-repeat #f6f7f9;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-image: linear-gradient(90deg, #1f2a44, var(--brand));
+    box-shadow: 0 2px 10px rgba(31, 42, 68, 0.25);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.navbar .nav-link {
+    border-radius: 6px;
+    margin-left: 0.25rem;
+}
+
+.navbar .nav-link.active {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* ---------- headings ---------- */
+main h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+main h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    background: var(--brand);
+}
+
+main h2 {
+    color: var(--ink);
     font-weight: 600;
 }
 
+/* ---------- every form is a white card ---------- */
+main form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(31, 42, 68, 0.08);
+    margin: 1.5rem 0 0 !important;
+}
+
+.form-label,
+.plain-form label {
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 0.2rem rgba(59, 74, 122, 0.2);
+}
+
+.form-check-input:checked {
+    background-color: var(--brand);
+    border-color: var(--brand);
+}
+
+/* ---------- buttons ---------- */
+.btn {
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+}
+
+.btn-primary {
+    background-color: var(--brand);
+    border-color: var(--brand);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--brand-dark);
+    border-color: var(--brand-dark);
+}
+
+/* ---------- plain forms (Tasks 0 and 1) ---------- */
 .plain-form input[type="text"],
 .plain-form input[type="email"],
 .plain-form textarea {
     width: 100%;
     max-width: 500px;
-    padding: 8px;
+    padding: 8px 10px;
     border: 1px solid #adb5bd;
-    border-radius: 4px;
+    border-radius: 8px;
     font: inherit;
 }
 
+.plain-form input:focus,
+.plain-form textarea:focus {
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 0.2rem rgba(59, 74, 122, 0.2);
+}
+
 .plain-form button {
-    padding: 8px 20px;
+    padding: 8px 22px;
     border: none;
-    border-radius: 4px;
-    background-color: #0d6efd;
+    border-radius: 8px;
+    background-color: var(--brand);
     color: #fff;
+    font: inherit;
     cursor: pointer;
+}
+
+.plain-form button:hover {
+    background-color: var(--brand-dark);
+}
+
+/* ---------- home page ---------- */
+.hero {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(31, 42, 68, 0.08);
+    border-left: 6px solid var(--brand);
+}
+
+.task-card {
+    display: block;
+    height: 100%;
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 16px rgba(31, 42, 68, 0.08);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.task-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(31, 42, 68, 0.15);
+}
+
+.task-num {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--brand);
+}
+
+.task-card h2 {
+    margin-bottom: 0.25rem;
+}
+
+.task-card p {
+    margin: 0;
+    color: #6c757d;
+}
+
+/* ---------- footer ---------- */
+.site-footer {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6c757d;
 }
